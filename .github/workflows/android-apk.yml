@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Extract Android project
-        run: unzip -o Market-Pulse-ANDROID-v4-source.zip
+        run: unzip -o Market-Pulse-ANDROID-v5-source.zip
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -21,5 +21,5 @@ jobs:
         run: gradle :app:assembleDebug --stacktrace
       - uses: actions/upload-artifact@v4
         with:
-          name: Market-Pulse-Android-v4-APK
+          name: Market-Pulse-Android-v5-APK
           path: app/build/outputs/apk/debug/app-debug.apk
